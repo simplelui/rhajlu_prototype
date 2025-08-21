@@ -1,0 +1,363 @@
+[gd_scene load_steps=19 format=3 uid="uid://bbk2x680of88a"]
+
+[ext_resource type="Texture2D" uid="uid://ddsmgpfbq0pcd" path="res://tiles and background/Dungeon_brick_wall_blue.png.png" id="1_qdh8v"]
+[ext_resource type="Texture2D" uid="uid://8kx4iry72wxk" path="res://tiles and background/platform.png" id="2_md2xp"]
+[ext_resource type="PackedScene" uid="uid://d4l371jqxh3kd" path="res://scenes/start/main_character.tscn" id="3_bqav0"]
+[ext_resource type="PackedScene" uid="uid://baor05i1ik6cl" path="res://scenes/others/end.tscn" id="4_o3qw1"]
+[ext_resource type="Script" uid="uid://bjl4prul47rb3" path="res://scenes/gd/end2.gd" id="5_glmpb"]
+[ext_resource type="Script" uid="uid://dapy7ja6euyfm" path="res://scenes/gd/pause.gd" id="6_hx8l0"]
+[ext_resource type="PackedScene" uid="uid://ckmql1kytn8ie" path="res://scenes/others/touch_control.tscn" id="7_md2xp"]
+[ext_resource type="Texture2D" uid="uid://bwmpx5o3mcpnu" path="res://sprite characters/hearts.png" id="8_glmpb"]
+[ext_resource type="Texture2D" uid="uid://blqibhdp0hanx" path="res://tiles and background/spikes.png" id="8_o3qw1"]
+[ext_resource type="Script" uid="uid://cw1y7ub1jjigx" path="res://scenes/level/area_2d.gd" id="9_glmpb"]
+[ext_resource type="Texture2D" uid="uid://cd4wmfmuge632" path="res://Buttons/6-removebg-preview.png" id="9_qjcf2"]
+[ext_resource type="Texture2D" uid="uid://cjx07r7qr700t" path="res://Buttons/7-removebg-preview.png" id="12_ds555"]
+[ext_resource type="Texture2D" uid="uid://qmcs8mt7fvny" path="res://Buttons/8-removebg-preview.png" id="13_5i6de"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmp44"]
+texture = ExtResource("2_md2xp")
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+5:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+5:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+10:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+2:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cqxf2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hmp44")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx8l0"]
+size = Vector2(231, 43.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjcf2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_ds555"]
+font_names = PackedStringArray("Alagard")
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1151.0
+offset_bottom = 632.0
+texture = ExtResource("1_qdh8v")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="TileMap" type="TileMap" parent="TextureRect"]
+tile_set = SubResource("TileSet_cqxf2")
+format = 2
+layer_0/tile_data = PackedInt32Array(2555904, 131072, 1, 2555905, 131072, 1, 2555906, 131072, 1, 2555907, 131072, 1, 2555908, 131072, 1, 2555909, 131072, 1, 2555910, 131072, 1, 2555911, 131072, 1, 2555912, 131072, 1, 2555913, 131072, 1, 2555914, 131072, 1, 2555915, 131072, 1, 2555916, 131072, 1, 2555917, 131072, 1, 2555918, 131072, 1, 2555919, 131072, 1, 2555920, 131072, 1, 2555921, 131072, 1, 2555922, 131072, 1, 2555923, 131072, 1, 2555924, 131072, 1, 2555925, 131072, 1, 2555926, 131072, 1, 2555927, 131072, 1, 2555928, 131072, 1, 2555929, 131072, 1, 2555930, 131072, 1, 2555931, 131072, 1, 2555932, 131072, 1, 2555933, 131072, 1, 2555934, 131072, 1, 2555935, 131072, 1, 2555936, 131072, 1, 2555937, 131072, 1, 2555938, 131072, 1, 2555939, 131072, 1, 2555940, 131072, 1, 2555941, 131072, 1, 2555942, 131072, 1, 2555943, 131072, 1, 2555944, 131072, 1, 2555945, 131072, 1, 2555946, 131072, 1, 2555947, 131072, 1, 2555948, 131072, 1, 2555949, 131072, 1, 2555950, 131072, 1, 2555951, 131072, 1, 2555952, 131072, 1, 2555953, 131072, 1, 2555954, 131072, 1, 2555955, 131072, 1, 2555956, 131072, 1, 2555957, 131072, 1, 2555958, 131072, 1, 2555959, 131072, 1, 2555960, 131072, 1, 2555961, 131072, 1, 2555962, 131072, 1, 2555963, 131072, 1, 2555964, 131072, 1, 2555965, 131072, 1, 2555966, 131072, 1, 2555967, 131072, 1, 2555968, 131072, 1, 2555969, 131072, 1, 2555970, 131072, 1, 2555971, 131072, 1, 2555972, 131072, 1, 2555973, 131072, 1, 2555974, 131072, 1, 2555975, 131072, 1, 2621511, 131072, 2, 2621510, 131072, 2, 2621509, 131072, 2, 2621508, 131072, 2, 2621507, 131072, 2, 2621506, 131072, 2, 2621505, 131072, 2, 2621504, 131072, 2, 2621503, 131072, 2, 2621502, 131072, 2, 2621501, 131072, 2, 2621500, 131072, 2, 2621499, 131072, 2, 2621498, 131072, 2, 2621497, 131072, 2, 2621496, 131072, 2, 2621495, 131072, 2, 2621494, 131072, 2, 2621493, 131072, 2, 2621492, 131072, 2, 2621491, 131072, 2, 2621490, 131072, 2, 2621489, 131072, 2, 2621488, 131072, 2, 2621487, 131072, 2, 2621486, 131072, 2, 2621485, 131072, 2, 2621484, 131072, 2, 2621483, 131072, 2, 2621482, 131072, 2, 2621481, 131072, 2, 2621480, 131072, 2, 2621479, 131072, 2, 2621478, 131072, 2, 2621477, 131072, 2, 2621476, 131072, 2, 2621475, 131072, 2, 2621474, 131072, 2, 2621473, 131072, 2, 2621472, 131072, 2, 2621471, 131072, 2, 2621470, 131072, 2, 2621469, 131072, 2, 2621468, 131072, 2, 2621467, 131072, 2, 2621466, 131072, 2, 2621465, 131072, 2, 2621464, 131072, 2, 2621463, 131072, 2, 2621462, 131072, 2, 2621461, 131072, 2, 2621460, 131072, 2, 2621459, 131072, 2, 2621458, 131072, 2, 2621457, 131072, 2, 2621456, 131072, 2, 2621455, 131072, 2, 2621454, 131072, 2, 2621453, 131072, 2, 2621452, 131072, 2, 2621451, 131072, 2, 2621450, 131072, 2, 2621449, 131072, 2, 2621448, 131072, 2, 2621447, 131072, 2, 2621446, 131072, 2, 2621445, 131072, 2, 2621444, 131072, 2, 2621443, 131072, 2, 2621442, 131072, 2, 2621441, 131072, 2, 2621440, 131072, 2, 2621439, 196608, 2, 2555903, 196608, 2, 2490367, 196608, 2, 2424831, 196608, 2, 2359295, 196608, 2, 2293759, 196608, 2, 2228223, 196608, 2, 2162687, 196608, 2, 2097151, 196608, 2, 2031615, 196608, 2, 1966079, 196608, 2, 1900543, 196608, 2, 1835007, 196608, 2, 1769471, 196608, 2, 1703935, 196608, 2, 1638399, 196608, 2, 1572863, 196608, 2, 1507327, 196608, 2, 1441791, 196608, 2, 1376255, 196608, 2, 1310719, 196608, 2, 1245183, 196608, 2, 1179647, 196608, 2, 1114111, 196608, 2, 1048575, 196608, 2, 983039, 196608, 2, 917503, 196608, 2, 851967, 196608, 2, 786431, 196608, 2, 720895, 196608, 2, 655359, 196608, 2, 589823, 196608, 2, 524287, 196608, 2, 458751, 196608, 2, 393215, 196608, 2, 327679, 196608, 2, 262143, 196608, 2, 196607, 196608, 2, 131071, 196608, 2, 65535, 196608, 2, 72, 196608, 2, 65608, 196608, 2, 131144, 196608, 2, 196680, 196608, 2, 262216, 196608, 2, 327752, 196608, 2, 393288, 196608, 2, 458824, 196608, 2, 524360, 196608, 2, 589896, 196608, 2, 655432, 196608, 2, 720968, 196608, 2, 786504, 196608, 2, 852040, 196608, 2, 917576, 196608, 2, 983112, 196608, 2, 1048648, 196608, 2, 1114184, 196608, 2, 1179720, 196608, 2, 1245256, 196608, 2, 1310792, 196608, 2, 1376328, 196608, 2, 1441864, 196608, 2, 1507400, 196608, 2, 1572936, 196608, 2, 1638472, 196608, 2, 1704008, 196608, 2, 1769544, 196608, 2, 1835080, 196608, 2, 1900616, 196608, 2, 1966152, 196608, 2, 2031688, 196608, 2, 2097224, 196608, 2, 2162760, 196608, 2, 2228296, 196608, 2, 2293832, 196608, 2, 2359368, 196608, 2, 2424904, 196608, 2, 2490440, 196608, 2, 2555976, 196608, 2, 2621512, 196608, 2)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_bqav0")]
+position = Vector2(-144, -8)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(335, 500)
+
+[node name="End2" parent="." instance=ExtResource("4_o3qw1")]
+script = ExtResource("5_glmpb")
+
+[node name="spike" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="spike"]
+texture_filter = 1
+position = Vector2(523, 592)
+scale = Vector2(2.5, 4.76316)
+texture = ExtResource("8_o3qw1")
+
+[node name="Area2D" type="Area2D" parent="spike"]
+script = ExtResource("9_glmpb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spike/Area2D"]
+position = Vector2(523.5, 602.75)
+shape = SubResource("RectangleShape2D_hx8l0")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="health" type="Panel" parent="CanvasLayer2"]
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 252.0
+offset_bottom = 88.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qjcf2")
+
+[node name="bar" type="HBoxContainer" parent="CanvasLayer2/health"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -37.5
+offset_right = 116.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="heart1" type="TextureRect" parent="CanvasLayer2/health/bar"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_glmpb")
+expand_mode = 2
+
+[node name="heart2" type="TextureRect" parent="CanvasLayer2/health/bar"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_glmpb")
+expand_mode = 2
+
+[node name="heart3" type="TextureRect" parent="CanvasLayer2/health/bar"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_glmpb")
+expand_mode = 2
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Container" parent="CanvasLayer2/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Pausing" type="TouchScreenButton" parent="CanvasLayer2/Control/Container"]
+position = Vector2(-87, -40)
+scale = Vector2(0.535, 0.535)
+texture_normal = ExtResource("9_qjcf2")
+
+[node name="TouchControl" parent="CanvasLayer2/Control" instance=ExtResource("7_md2xp")]
+
+[node name="Pause" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_hx8l0")
+
+[node name="PausePanel" type="Panel" parent="CanvasLayer2/Pause"]
+unique_name_in_owner = true
+process_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Container" parent="CanvasLayer2/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="TouchScreenButton" parent="CanvasLayer2/Pause/PausePanel/Container"]
+unique_name_in_owner = true
+position = Vector2(-132, -38)
+texture_normal = ExtResource("12_ds555")
+metadata/_edit_use_anchors_ = true
+
+[node name="Container2" type="Container" parent="CanvasLayer2/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="TouchScreenButton" parent="CanvasLayer2/Pause/PausePanel/Container2"]
+unique_name_in_owner = true
+position = Vector2(-131, 104)
+texture_normal = ExtResource("13_5i6de")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer2/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -168.0
+offset_right = 144.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_ds555")
+theme_override_font_sizes/font_size = 50
+text = "Game pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="spike/Area2D" to="spike/Area2D" method="_on_body_entered"]
+[connection signal="pressed" from="CanvasLayer2/Control/Container/Pausing" to="CanvasLayer2/Pause" method="_on_pausing_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Pause/PausePanel/Container/Resume" to="CanvasLayer2/Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Pause/PausePanel/Container2/Menu" to="CanvasLayer2/Pause" method="_on_menu_pressed"]

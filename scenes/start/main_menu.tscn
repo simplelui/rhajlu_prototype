@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqco2jvwpg600"]
+
+[ext_resource type="Script" uid="uid://bmwus5g7lhq8v" path="res://scenes/gd/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dc3tjfp3hxcmi" path="res://tiles and background/DeWatermark.ai_1755005515531.jpeg" id="2_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://c25a520mi65v7" path="res://tiles and background/cooltext488648992812296.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cw62vhyfe5c6r" path="res://Buttons/3-removebg-preview.png" id="4_vgio8"]
+[ext_resource type="Texture2D" uid="uid://c23goaxw5rh3b" path="res://Buttons/4-removebg-preview.png" id="5_oadol"]
+[ext_resource type="Texture2D" uid="uid://0v7hwojgjgjb" path="res://Buttons/5-removebg-preview.png" id="6_4lc63"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_bqqt6")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497396
+anchor_top = 0.296296
+anchor_right = 0.497396
+anchor_bottom = 0.296296
+offset_left = -483.0
+offset_top = -77.0
+offset_right = 483.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("3_bqqt6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="back" type="TouchScreenButton" parent="Container"]
+position = Vector2(-60, -64)
+scale = Vector2(0.73, 0.73)
+texture_normal = ExtResource("4_vgio8")
+
+[node name="Container3" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503201
+anchor_top = 0.506
+anchor_right = 0.728201
+anchor_bottom = 0.647
+offset_left = 0.311951
+offset_top = 0.111969
+offset_right = 0.111938
+offset_bottom = 1.74399
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00346743
+metadata/_edit_use_anchors_ = true
+
+[node name="hardcore" type="TouchScreenButton" parent="Container3"]
+position = Vector2(-17.4686, -115.355)
+scale = Vector2(1.00823, 1.00542)
+texture_normal = ExtResource("6_4lc63")
+
+[node name="Container4" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00346743
+
+[node name="casual" type="TouchScreenButton" parent="Container4"]
+position = Vector2(39.3812, -109.864)
+rotation = 0.00346743
+texture_normal = ExtResource("5_oadol")
+
+[connection signal="pressed" from="Container/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Container3/hardcore" to="." method="_on_hardcore_pressed"]
+[connection signal="pressed" from="Container4/casual" to="." method="_on_casual_pressed"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://drahd8k04l5pm"]
+
+[ext_resource type="Texture2D" uid="uid://dc3tjfp3hxcmi" path="res://tiles and background/DeWatermark.ai_1755005515531.jpeg" id="2_kdmts"]
+[ext_resource type="Texture2D" uid="uid://c25a520mi65v7" path="res://tiles and background/cooltext488648992812296.png" id="3_0auqf"]
+[ext_resource type="Script" uid="uid://jnm3w35o1ojf" path="res://scenes/start.gd" id="3_bodal"]
+[ext_resource type="Texture2D" uid="uid://bc2fp42dg6uk3" path="res://Buttons/2-removebg-preview.png" id="4_0stv2"]
+[ext_resource type="Texture2D" uid="uid://bvr6t316ocdjq" path="res://Buttons/1-removebg-preview.png" id="4_stwfd"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_bodal")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("2_kdmts")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497396
+anchor_top = 0.296296
+anchor_right = 0.497396
+anchor_bottom = 0.296296
+offset_left = -483.0
+offset_top = -77.0
+offset_right = 483.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+texture = ExtResource("3_0auqf")
+
+[node name="settings" type="TouchScreenButton" parent="."]
+metadata/_edit_use_anchors_ = true
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.558
+anchor_right = 0.486
+anchor_bottom = 0.558
+offset_left = -32.872
+offset_top = -26.584
+offset_right = 34.312
+offset_bottom = 25.224
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="TouchScreenButton" parent="Container"]
+texture_filter = 1
+position = Vector2(-128, -119)
+scale = Vector2(1.032, 0.976)
+texture_normal = ExtResource("4_stwfd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Container2" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="exit" type="TouchScreenButton" parent="Container2"]
+position = Vector2(-140, -42)
+scale = Vector2(0.62, 0.62)
+texture_normal = ExtResource("4_0stv2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Container/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Container/start" to="Container/start" method="_on_pressed"]
+[connection signal="pressed" from="Container2/exit" to="." method="_on_exit_pressed"]
