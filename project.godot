@@ -14,7 +14,7 @@ config/name="RhajLu Adventure"
 run/main_scene="uid://drahd8k04l5pm"
 config/features=PackedStringArray("4.4", "Mobile")
 boot_splash/image="uid://dsgk2kx138x5x"
-config/icon="uid://bwmpx5o3mcpnu"
+config/icon="uid://dftpxxoittk3l"
 
 [display]
 
@@ -58,6 +58,10 @@ jump={
 
 pointing/emulate_touch_from_mouse=true
 pointing/emulate_mouse_from_touch=false
+
+[layer_names]
+
+2d_physics/layer_5="spikes"
 
 [rendering]
 
