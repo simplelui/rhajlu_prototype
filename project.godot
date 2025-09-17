@@ -21,6 +21,10 @@ config/icon="uid://dftpxxoittk3l"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[global_group]
+
+Player=""
+
 [input]
 
 attack={
