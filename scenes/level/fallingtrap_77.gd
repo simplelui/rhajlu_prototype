@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var speed: float = 700.0
+@export var speed: float = 900.0
 @export var direction: Vector2 = Vector2.LEFT  # Default fall direction
 @export var reset_delay: float = 5           # Time before it pops back
 @export var impact_damage: int = 2             # Damage applied on collision
